@@ -1,7 +1,8 @@
-#Introduction
-Frontend voor de social story time app https://story.social
+# Introduction
 
-#Installation
+Angular starter kit lets you easily create a front end for your app
+
+# Installation
 
 `npm install`
 
@@ -13,24 +14,28 @@ this runs gulp build and creates a public folder from the sources
 
 `gulp clean` simple clean up the public folder for a reset in development
 
-#File structure
+`gulp deploy` first runs the clean tasks and then builds the public
+
+# File structure
 
 ```
-.storytime
-├── LICENSE
-├── Procfile
-├── README.md
-├── gulpfile.js
-├── node_modules
-├── server.js
 └── src
     ├── app
-    │   ├── app.js
-    │   └── components
+    │   ├── app.js
+    │   ├── app.main.controller.js
+    │   └── components
+    │       ├── auth
+    │       ├── login
+    │       ├── navigation
+    │       ├── register
+    │       └── static
     ├── assets
-    │   ├── images
-    │   ├── js
-    │   ├── scss
-    │   └── theme
+    │   ├── images
+    │   │   └── main_title.png
+    │   ├── js
+    │   │   └── base.js
+    │   └── scss
+    │       ├── components
+    │       └── main.scss
     └── index.html
 ```
