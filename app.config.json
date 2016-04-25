@@ -1,0 +1,8 @@
+{
+  "production": {
+    "API_URL": "https://api.story.social"
+  },
+  "development": {
+    "API_URL": "http://localhost:8080"
+  }
+}
