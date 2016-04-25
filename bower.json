@@ -1,5 +1,5 @@
 {
-  "name": "storytime",
+  "name": "angular-starter-kit",
   "description": "Social story time application",
   "main": "server.js",
   "authors": [
@@ -7,8 +7,6 @@
   ],
   "license": "GPL-3.0",
   "homepage": "https://github.com/klaaz0r/angular-starter-kit",
-  "moduleType": [],
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,10 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.2.3",
-    "angular": "1.x",
     "angular-ui-router": "^0.2.18",
-  "resolutions": {
+    "angular": "^1.5.5",
     "jquery": "^2.2.3"
   }
 }

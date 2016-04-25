@@ -17,33 +17,33 @@ var gulp = require('gulp'),
 
 //input files to work with, this keeps everything organised
 input = {
-        // **/*.extension gets all nested files
-        'sass': 'src/assets/scss/**/*.scss',
-        'javascript': 'src/assets/js/**/*.js',
-        //for the index html
-        'html': 'src/*.html',
-        //the complete angular app'angular': 'src/app/**/*.js',
-        //angular html views
-        'angular_views': 'src/app/components/**/*.html',
-        //bower components are moved (only the minjs files )
-        'vendor': 'bower_components/**/*.min.js',
-        //image folder
-        'images': 'src/assets/images/**/*'
-    },
+    // **/*.extension gets all nested files
+    'sass': 'src/assets/scss/**/*.scss',
+    'javascript': 'src/assets/js/**/*.js',
+    //for the index html
+    'html': 'src/*.html',
+    //the complete angular app'angular': 'src/app/**/*.js',
+    //angular html views
+    'angular_views': 'src/app/components/**/*.html',
+    //bower components are moved (only the minjs files )
+    'vendor': 'bower_components/**/*.min.js',
+    //image folder
+    'images': 'src/assets/images/**/*'
+};
 
-    //where we save the files to once gulp is done with them
-    output = {
-        'stylesheets': 'public/assets/css',
-        'javascript': 'public/assets/js',
-        'images': 'public/images',
-        'root': 'public',
-        'app': 'public/app',
-        'app_views': 'public/app/components',
-        'vendor': 'public/vendor',
-    };
+//where we save the files to once gulp is done with them
+output = {
+    'stylesheets': 'public/assets/css',
+    'javascript': 'public/assets/js',
+    'images': 'public/images',
+    'root': 'public',
+    'app': 'public/app',
+    'app_views': 'public/app/components',
+    'vendor': 'public/vendor'
+};
 
 /* run the watch task when gulp is called without arguments */
-gulp.task('default', ['watch', 'start-server', 'angular']);
+gulp.task('default', ['watch', 'start-server']);
 
 /* this tasks runs on the server and creates all the files */
 gulp.task('build', ['bower', 'css', 'javascript', 'angular', 'html', 'images', 'angular_views']);
@@ -163,7 +163,6 @@ gulp.task('watch', function() {
     gulp.watch(input.javascript, ['jshint', 'javascript']);
     gulp.watch(input.sass, ['css']);
     gulp.watch(input.html, ['html']);
-    gulp.watch(input.theme, ['theme']);
     gulp.watch(input.angular, ['angular']);
     gulp.watch(input.angular_views, ['angular_views']);
     gulp.watch(input.images, ['images']);
