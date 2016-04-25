@@ -27,6 +27,8 @@ input = {
     'angular_views': 'src/app/components/**/*.html',
     //bower components are moved (only the minjs files )
     'vendor': 'bower_components/**/*.min.js',
+    //angular source
+    'angular': 'src/app/**/*.js',
     //image folder
     'images': 'src/assets/images/**/*'
 };
